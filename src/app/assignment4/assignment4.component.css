@@ -1,0 +1,57 @@
+/*  checkbox */
+.name1 {
+    font-weight: 700;
+}
+.checkbox {
+    border: 7px solid rgb(135, 93, 50);
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+
+}
+.table {
+    border: 2px solid black;
+     width: 50%;
+    margin-left: 25%;
+    margin-top: 2%;
+}
+/* container2 => ngFor */
+/* .container2 {
+    border: 2px solid black;
+    width: 80%;
+    margin-left: 25%;
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 2%;
+} */
+#ngFor{
+    text-align: center;
+    font-size: x-large;
+    font-weight: 500;
+}
+.head {
+    color: pink;
+}
+/* container3 => SwitchCase */
+.container3 {
+    border: 7px solid rgb(78, 99, 141);
+    width: 50%;
+    /* margin-top: 5%; */
+    height: 100%;
+    margin-left: 25%;
+    margin-bottom: 40%;
+}
+#name{
+    /* margin-left: 5%; */
+    font-size: x-large;
+    text-align: center;
+    font-weight: 300;
+}
+
+#img{
+    margin-left: 30%;
+}
+#h1{
+    text-align: center;
+    background: rgb(231, 231, 118);
+}

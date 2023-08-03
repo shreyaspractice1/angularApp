@@ -1,0 +1,45 @@
+<!-- 
+<div class="page"><h1>
+   <h2 id="username">Enter Username : </h2> <input type="text" placeholder=" Enter the Username " [(ngModel)] = "username">  
+</h1>
+
+    <h1 id="result">{{username}}</h1>
+<div class="submit">
+    
+<button type="button" class="btn btn-primary"[disabled]="username === ' '" (click)="submit()"><b><h2> Submit </h2></b></button>
+
+
+<div class="spinner" *ngIf="isLoading">
+    <div class="spinner-border m-5" role="status">
+        <span class="visually-hidden">Loading...<div class="spinner-border m-5" role="status">
+            <span class="visually">Loading...</span>
+          </div></span>
+      </div>
+    </div>
+
+
+</div>
+</div> -->
+<!-- ============================================================================================== -->
+
+<div class="page">
+    <h1>
+      <h2 id="username">Enter Username:</h2>
+      <input type="text" placeholder="Enter the Username" [(ngModel)]="username">
+    </h1>
+  
+    <h1 id="result">{{username}}</h1>
+  
+    <div class="submit">
+      <button type="button" class="btn btn-primary" [disabled]="username === ''" (click)="submit()">
+        <h2>Submit</h2>
+      </button>
+  
+      <div class="spinner" *ngIf="isLoading">
+        <div class="spinner-border m-5" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
