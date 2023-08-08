@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-practice',
@@ -7,71 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PracticeComponent implements OnInit {
 
-  selectedate='';
-    formdata={
-      password:'',
-      confirm_password:''
-    }
-
-  isEmailValid=false;
-     gender=[
-      {id:1,name:'Male'},
-      {id:2,name:'female'}
-     ];
-     country=['India','USA','Canda','Austrialia'];
-      code=[91,100,102,103];
-      y;
-      
-      
-      countrychange(z){
-        console.log(z);
-          this.y=this.code[this.country.indexOf(z)]
-          console.log('change event');
-          console.log(this.y);
-          
-           
-      }
-
-     OnSubmit(data){
-      console.log('username:',data.value.username);
-      console.log('username:',data.value.email);
-      console.log('username:',data.value.password);
-      console.log('username:',data.value.confirmpassword);
-      
-      
-     }
-       
-     checkEmail(email) {
-      // console.log(email.target.value);
-  
-      const domain = email.target.value.substring(email.target.value.lastIndexOf('@') + 1);
-      // console.log('domain ',domain);
-  
-      if(domain == 'codemindtechnology.com') 
-      {
-        // false
-        this.isEmailValid = false;
-      }
-      else {
-        // true
-        this.isEmailValid = true;
-      }
-    }
-
-    count='';
-    x;
-  constructor() {
+  registerForm : FormGroup;
+  title ='formValidation';
+  submitted = false;
+ 
+  constructor(private formBuilder:FormBuilder) {
     
    }
-
   ngOnInit() {
-    console.log('ngonint');
-    
+    this.registerForm = this.formBuilder.group({
+      firstname: ['',[ Validators.required,Validators.minLength(4)]],
+      lastname: ['', Validators.required],
+      email: ['', [Validators.required,Validators.email]],
+      password: ['', [Validators.required,Validators.minLength(8)]],
+    })
+   
   }
-  onClick(){
-    this.x=this.count.length;
-    console.log(this.count.length);
-    
+
+onSubmit() {
+  this.submitted = true;
+  if (this.registerForm.invalid) {
+    return
   }
+  alert('Success')
+}
+ 
 
 }

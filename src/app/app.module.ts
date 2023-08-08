@@ -25,6 +25,8 @@ import { Assignment6Component } from './assignment6/assignment6.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { ReactiveFormAssignmentComponent } from './reactive-form-assignment/reactive-form-assignment.component';
 import { Assignment7Component } from './assignment7/assignment7.component';
+import { Comp1Component } from './comp1/comp1.component';
+import { Comp2Component } from './comp2/comp2.component';
 
 
 
@@ -49,6 +51,8 @@ import { Assignment7Component } from './assignment7/assignment7.component';
     ReactiveFormsComponent,
     ReactiveFormAssignmentComponent,
     Assignment7Component,
+    Comp1Component,
+    Comp2Component,
    
   ],
   imports: [

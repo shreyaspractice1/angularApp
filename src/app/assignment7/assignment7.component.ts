@@ -2,12 +2,11 @@ import { Component, OnInit } from "@angular/core";
 import { FormArray, FormControl, FormGroup, Validators } from "@angular/forms";
 
 @Component({
-  selector: 'app-assignment7',
-  templateUrl: './assignment7.component.html',
-  styleUrls: ['./assignment7.component.css']
+  selector: "app-assignment7",
+  templateUrl: "./assignment7.component.html",
+  styleUrls: ["./assignment7.component.css"],
 })
-export class Assignment7Component implements OnInit
- {
+export class Assignment7Component implements OnInit {
   // selectedGender: string = 'male'; // Set default value to 'male'
 
   // onGenderChange(event: any) {
@@ -49,8 +48,7 @@ export class Assignment7Component implements OnInit
       bio: new FormControl([Validators.maxLength(32)]),
       gender: new FormControl("Male"),
       email: new FormControl("", Validators.required),
-      skills: new FormArray([new FormControl("Angular8", Validators.required)]),
-    });
+      });
   }
   OnSubmit() {
     if (this.myForm.valid) {

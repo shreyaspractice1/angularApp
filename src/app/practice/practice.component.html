@@ -1,213 +1,51 @@
-<!-- <p id="p">practice works!</p>
-<div class="container1">
-    <h2 id="checkbox-name"> Please select the checkbox <input type="checkbox" id="checkbox" (click)="onChange($event)">
-    </h2>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
 
-
-    <div *ngIf="isChecked">
-
-        <div class="container2">
-            <p id="ngFor">ngFor Works!</p>
-            <div class="col-md-12">
-                <table class="table">
-                    <thead>
-                        <tr class="head">
-                            <th>SR.NO</th>
-                            <th>Course Name</th>
-                            <th>Course Duration</th>
-                            <th>course fees</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let course of courses, index as i">
-                            <td>{{i+1}}</td>
-                            <td>{{course.course_Name}}</td>
-                            <td>{{course.course_Duration}} Months</td>
-                            <td>$ {{course.course_Fees}}</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="container3">
-                    <p id="name"><b> SwitchCase assignment works!</b></p>
-                    <div class="container display-5">
-                        <h1 id="h1">
-                            Welcome to Jio-Savan App!
-                        </h1>
-                        <img id="img" width="300" alt="Savan Logo"
-                            src="data:image/png;base64,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">
-
-
-
-
-
-                        <nav class="navbar navbar-expand-lg navbar-light bg-secondary display-5">
-                            <div class="container-md">
-                                <a class="navbar-brand" href="#">
-
-                                    <div class="col-md-12">
-                                        <select class="form-control" (change)="getOptionValue($event)">
-                                            <option value="Default"> Select Option</option>
-                                            <option value="Images"> Images </option>
-                                            <option value="Music"> Music </option>
-                                            <option value="Videos"> Videos </option>
-                                        </select>
-                                    </div>
-                                </a>
-
-                            </div>
-
-                        </nav>
-
-                        <div>
-                            <div class="col-md-12 display-5 bg-light" [ngSwitch]="selectedOption">
-                                <h2 class="text-success" *ngSwitchDefault> Please select product </h2>
-                                <h2 class="text-white bg-primary" *ngSwitchCase="'Images'">Images <a
-                                        href="https://lp-cms-production.imgix.net/2023-03/GettyImages-1464461568.jpg"></a>
-                                </h2>
-                                <h2 class="text-white bg-info" *ngSwitchCase="'Music'"> Music </h2>
-                                <h2 class="text-warning bg-success" *ngSwitchCase="'Videos'"> Videos </h2>
-                            </div>
-                        </div>
-
-
+                <div class="form-group">
+                    <label for="firstbname">First Name :</label>
+                    <input formControlName="firstname" [ngClass]="{'is-invalid' : submitted && registerForm.controls.firstname.errors}" type="text" class="form-control">
+                    <div *ngIf="submitted && registerForm.controls.firstname.errors" class="text-danger">
+                        <div *ngIf=" submitted && registerForm.controls.firstname.errors.required">First Name is Required *</div>
+                        <div *ngIf="registerForm.controls.firstname.errors.minlength">Must contains at-least 4 character*</div>
                     </div>
                 </div>
-            </div>
+
+
+                <div class="form-group">
+                    <label for="lastname">Last Name :</label>
+                    <input formControlName="lastname" [ngClass]="{'is-invalid' : submitted && registerForm.controls.lastname.errors}"   type="text" class="form-control">
+                    <div *ngIf="submitted && registerForm.controls.lastname.errors" class="text-danger">
+                        <div *ngIf=" submitted && registerForm.controls.lastname.errors.required">Last Name is Required *</div>
+                    </div>
+                </div>
+              
+
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input formControlName="email" [ngClass]="{'is-invalid' : submitted && registerForm.controls.email.errors}"   type="text" class="form-control">
+                    <div *ngIf="submitted && registerForm.controls.email.errors" class="text-danger">
+                        <div *ngIf=" submitted && registerForm.controls.email.errors.required">Email is Required *</div>
+                    <div *ngIf="submitted && registerForm.controls.email.errors.email">Email is Invalid*</div>
+                    </div>
+                </div>
+               
+
+                <div class="form-group">
+                    <label for="password">Password :</label>
+                    <input formControlName="password" [ngClass]="{'is-invalid' : submitted && registerForm.controls.password.errors}"   type="password" class="form-control">
+                    <div *ngIf="submitted && registerForm.controls.password.errors" class="text-danger">
+                        <div *ngIf=" submitted && registerForm.controls.password.errors.required">Password is Required *</div>
+                    <div *ngIf="submitted && registerForm.controls.password.errors.minlength">Password must be at-least 8 character's *</div>
+                    </div>
+                </div>
+              
+
+                <div class="form-group">
+                    <button class="btn btn-primary">Register</button>
+                </div>
+            </form>
         </div>
     </div>
-</div> -->
-<!-- ========================================================
- -->
-
-<!-- <label for="country">Country:</label>
-<select id="country" [(ngModel)]="selectedCountry" (change)="onCountryChange()">
-  <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
-</select>
-
-<label for="state">State:</label>
-<select id="state">
-  <option *ngFor="let state of filteredStates" [value]="state.name">{{ state.name }}</option>
-</select> -->
-
-<!-- =========================================================== -->
-
-<!-- <form #loginForm="ngForm" (ngSubmit)="loginUser(loginForm.value)">
-    <label for="username">Username : </label>
-    <input type="text" name="username" id="username" placeholder="Enter Username" ngModel><br>
-    <label for="password">Password : </label>
-    <input type="password" name="password" id="password" placeholder="Enter Password" ngModel><br><br>
-    <button>
-        Login
-    </button>
-
-</form>
-
-<button (click)="loginUser(loginForm.value)">Login2</button> -->
-
-<div class="container-fluid mt-4">
-    <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
-        <div class="row justify-content-center">
-            <div class="left col-2 ">
-                <div class=" mt-3 d-flex justify-content-center align-items-center">
-                    <img src="assets\imgs\IMGE.JPG.jpeg" alt="" height="100px" width="100px" />
-                </div>
-                <h5 class="text-center mt-3">Akshay Palase</h5>
-                <p class="text-center p-5">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad inventore
-                    voluptatem quam sed libero illo!
-                </p>
-            </div>
-            <div class="center col-4">
-                <h3>User details</h3>
-                <div class="form-group mb-4">
-                    <div>
-                        <label for="fullname">Full Name<span class="aria" class="required">*</span></label>
-                    </div>
-                    <input type="text" name="fullname" #fullname="ngModel" ngModel required class="col-md-10" />
-                    <div class="text-danger" *ngIf="fullname.invalid && fullname.touched">Enter a valid name </div>
-                </div>
-                <div class="form-group mb-4">
-                    <input type="date" name="date" #date="ngModel" required ngModel placeholder="Your birthday*"
-                        class="col-md-10" />
-                    <div class="text-danger" *ngIf="date.invalid && date.touched">please select date</div>
-                </div>
-                <div class="form-group mb-4">
-                    <select name="gender" class="col-md-10" #gen="ngModel" [ngModel]="selectedate">
-                        <option *ngFor="let gen of gender" value="{{ gen.id }}">
-                            {{ gen.name }}
-                        </option>
-                    </select>
-                    <div class="text-danger" *ngIf="gen.touched && !gen.dirty">
-                        please select gender</div>
-                </div>
-                <div class="form-group mb-4 ">
-                    <div><label for="country">country</label></div>
-                    <select name="country" class="col-md-2" [(ngModel)]="selectedCountry"
-                        (change)="countrychange($event)">
-                        <option *ngFor="let coun of country" value="{{coun.country}}">
-                            {{ coun }}
-                        </option>
-                    </select>
-                    <span class="px-3">
-
-                        <input type="number" placeholder="Enter phone number" class="col-md-7" name="phone" />
-                    </span>
-                </div>
-                <div class="form-group">
-                    <div><label for="Bio">Bio</label></div>
-                    <textarea id="message" name="message" maxlength="256" (keypress)="onClick()" [(ngModel)]="count"
-                        rows="2" cols="40"
-                        placeholder="Type your message here...">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum delectus repudiandae dolor</textarea>
-                    <div>Tell us about yourself<span class="p-5">
-                            {{x}}/256</span>
-                    </div>
-                </div>
-            </div>
-            <div class="right col-4">
-                <h3 class="mb-4">Account details</h3>
-                <div class="form-group mb-4">
-                    <input type="text" name="username" class="col-md-10" #username="ngModel" ngModel
-                        placeholder="username*" required minlength="5" maxlength="25" pattern="[a-zA-Z0-9]+$" />
-                    <div *ngIf="username.invalid && username.touched" class="text-danger">
-                        username must contain atleast 5 characters
-                    </div>
-                    <div *ngIf="username.errors?.pattern" class="text-danger">
-                        Only letters and alphabets are allowed.
-                    </div>
-                </div>
-                <div class="form-group mb-4">
-                    <input type="email" name="email" required (blur)="checkEmail($event)" #email="ngModel"
-                        class="col-md-10" placeholder="email*" email ngModel />
-                    <div *ngIf="!email.valid && email.touched" class="text-danger">
-                        Enter a valid Email
-                    </div>
-                    <div *ngIf="isEmailValid" class="text-danger">
-                        please enter valid Domain
-                    </div>
-                </div>
-                <div class="form-group mb-4">
-                    <input type="password" name="password" class="col-md-10" required minlength="5"
-                        pattern="[A-Za-z\d@$!%?&]{5,}" #password="ngModel" ngModel placeholder="password" />
-                    <div *ngIf="!password.valid && password.touched" class="text-danger">
-                        Password must be atleast 5 chacters long
-                    </div>
-                    <div *ngIf="password.errors?.pattern" class="text-danger">
-                        Your password must contain atleast one uppercase,one lowercase and
-                        one number
-                    </div>
-                </div>
-                <div class="form-group mb-4">
-                    <input type="password" name="confirm password" required class="col-md-10" ngModel
-                        placeholder="confirm password*" />
-                </div>
-                <div class="form-group mb-4">
-                    <input type="checkbox" ngModel name="checkbox" />
-                    <label class="ml-2">I accept terms and conditions</label>
-                </div>
-                <button [disabled]="myForm.invalid" class="btn btn-primary">
-                    Submit
-                </button>
-            </div>
-        </div>
-    </form>
 </div>
