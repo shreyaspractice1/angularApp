@@ -7,6 +7,11 @@ export class Service1Service {
 
   constructor() { }
 
+  hello(){
+    alert('Hello comp')
+
+  }
+
   products = [
     { name: 'laptop', id: '101'},
     { name: 'Mobile', id: '102'},

@@ -27,6 +27,23 @@ import { ReactiveFormAssignmentComponent } from './reactive-form-assignment/reac
 import { Assignment7Component } from './assignment7/assignment7.component';
 import { Comp1Component } from './comp1/comp1.component';
 import { Comp2Component } from './comp2/comp2.component';
+import { Age1Component } from './age1/age1.component';
+import { Age2Component } from './age2/age2.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Service1Service } from './Services/service1.service';
+import { ReactiveAssignment2Component } from './reactive-assignment2/reactive-assignment2.component';
+import { DemoRegistractionFormComponent } from './demo-registraction-form/demo-registraction-form.component';
+import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
+import { CountPipe } from './count.pipe';
+import { FilterPipe } from './filter.pipe';
+import { FilterPipeComponent } from './filter-pipe/filter-pipe.component';
+import { FilterPipeAssignmentComponent } from './filter-pipe-assignment/filter-pipe-assignment.component';
+import { FilterUserPipe } from './filter-user.pipe';
+import { Comp3Component } from './comp3/comp3.component';
+import { Comp4Component } from './comp4/comp4.component';
+import { Comp5Component } from './comp5/comp5.component';
+import { Comp6Component } from './comp6/comp6.component';
+
 
 
 
@@ -53,15 +70,33 @@ import { Comp2Component } from './comp2/comp2.component';
     Assignment7Component,
     Comp1Component,
     Comp2Component,
+    Age1Component,
+    Age2Component,
+    ReactiveAssignment2Component,
+    DemoRegistractionFormComponent,
+    PipeDemoComponent,
+    CountPipe,
+    FilterPipe,
+    FilterPipeComponent,
+    FilterPipeAssignmentComponent,
+    FilterUserPipe,
+    Comp3Component,
+    Comp4Component,
+    Comp5Component,
+    Comp6Component,
+   
    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    // Service1Service    // It's another method to use service 
+  ],
   bootstrap: [AppComponent],
   
 })

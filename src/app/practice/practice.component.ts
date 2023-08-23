@@ -11,7 +11,9 @@ export class PracticeComponent implements OnInit {
   registerForm : FormGroup;
   title ='formValidation';
   submitted = false;
- 
+ todayDate = new Date
+  todaysDate = new Date;
+
   constructor(private formBuilder:FormBuilder) {
     
    }
@@ -20,7 +22,7 @@ export class PracticeComponent implements OnInit {
       firstname: ['',[ Validators.required,Validators.minLength(4)]],
       lastname: ['', Validators.required],
       email: ['', [Validators.required,Validators.email]],
-      password: ['', [Validators.required,Validators.minLength(8)]],
+      password: ['', [Validators.required,Validators.minLength(8),Validators.maxLength(12)]],
     })
    
   }
@@ -30,7 +32,7 @@ onSubmit() {
   if (this.registerForm.invalid) {
     return
   }
-  alert('Success')
+  alert('Success : Form Submitted');
 }
  
 
