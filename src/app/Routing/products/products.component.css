@@ -1,0 +1,46 @@
+.container {
+    /* margin-left: 10%; */
+    margin-top: -1%;
+    background-color: lightyellow;
+}
+.card{
+    display: inline-block;
+    margin: 15px 10px 10x;
+    width: 40%;
+    height: 40%;
+}
+.getd {
+    margin-left: 35%;
+}
+.lImg {
+    width: 507px;
+    height: 260px;
+}
+.wmImg {
+    width: 238px;
+    margin-left: 27%;
+    margin-top: 5%;
+}
+.tabImg {
+    width: 400px;
+    height: 338px;
+    margin-left: 50%;
+    
+    margin: 2%;
+}
+.laptop {
+    height: auto;
+}
+.tv {
+    margin: 2%;
+    height: auto;
+}
+.tablet {
+    width: 500px;
+    height: auto;
+
+}
+.washingMc {
+    margin: 2%;
+    height: auto;
+}

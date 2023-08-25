@@ -9,6 +9,7 @@ import { UtilityService } from '../Services/utility.service';
 export class Comp4Component implements OnInit {
 
   userName = 'Codemind';
+  password = '';
   test;
 
   constructor(private utilityService: UtilityService) { }
@@ -19,6 +20,11 @@ export class Comp4Component implements OnInit {
       this.userName = res;
       console.log('res from subject', res);
     })
+     this.utilityService.password.subscribe(res => {
+      this.password = res;
+      console.log('res from subject', res);
+      
+    })
 
   }
 
@@ -28,6 +34,10 @@ export class Comp4Component implements OnInit {
 
     // we are inserting value inside observable
     this.utilityService.userName.next(uname.value);
+  }
+  updatePassword(pass){
+    this.password = pass.value;
+    this.utilityService.password.next(pass.value)
   }
   
 }

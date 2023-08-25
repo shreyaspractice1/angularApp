@@ -1,0 +1,45 @@
+.card-img-top {
+    width: 650px;
+    border-radius: 5%;
+}
+.tablet {
+    margin-top: 5%;
+    margin-left: 20%;
+    display: inline-block;
+    /* background-color: beige; */
+}
+
+#back {
+    margin-left: -15%;
+    position: fixed;
+    
+}
+.l1 {
+    /* width: 500px; */
+    color: brown;
+    display: inline-block;
+}
+.cardTitle{
+    color: crimson;
+    font-weight: 700;
+    margin-left: 20%;
+    font-size: x-large;
+}
+.cardInfo{
+    color: brown;
+}
+.hpImg {
+    width: 300px;
+}
+.aplImg {
+    width: 400px;
+}
+.delImg {
+    width: 400px;
+}
+.acrImg {
+    width: 300px;
+}
+.lnvImg {
+    width: 300px;
+}

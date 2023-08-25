@@ -1,7 +1,43 @@
-.container {
-    border: 5px solid rgb(73, 64, 64);
-    margin-left: 17%;
+.acontainer {
+    border: 3px solid rgb(73, 64, 64);
+    /* margin-left: 17%; */
+    /* margin-top: 2%; */
+    /* margin: 50px; */
+    padding-left: 20%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://images.pond5.com/modern-abstract-light-blue-background-photo-228963311_iconl_nowm.jpeg');
+    display: inline-block;
+    margin-left: 8%;
+    
+}
+.nav-items {
+    border: none;
+}
+.nav {
+    background-color: lightgrey;
+}
+.nav-link {
+    font-size: large;
+}
+.nsr {
+    margin-left: 1100%;
+    width: 60px;
+    margin-top: 13%;
+}
+.lgn {
+    margin-left: 900%;
+    margin-top: 10%;
+}
+.hom {
+    margin-top: 11%;
+}
+.abs {
     margin-top: 8%;
-    margin: 50px;
-    padding: 5%;
+}
+.cts {
+    margin-top: 7%;
 }

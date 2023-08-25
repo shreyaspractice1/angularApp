@@ -1,0 +1,42 @@
+.tv1 {
+    width: 300px;
+    display: inline-block;
+    color: firebrick;
+}
+#back {
+    margin-left: -15%;
+    position: fixed;
+    margin-top: 3%;
+}
+.cardTitle {
+    color: blueviolet ;
+    font-weight: 700
+}
+.cardInfo {
+    color: brown;
+}
+.samsungImg {
+    width: 300px;
+    /* margin-left: 20%; */
+}
+.redmiImg{
+    width: 300px;
+    /* margin-left: 20%; */
+
+}
+.kdkImg {
+    width: 300px;
+    /* margin-left: 20%; */
+
+}
+.tsbImg {
+    width: 300px;
+    /* margin-left: 20%; */
+
+}
+.tv {
+    display: inline-flex;
+    padding-left: 25%;
+    background-color: azure;
+    /* margin-top: 5%; */
+}

@@ -43,6 +43,20 @@ import { Comp3Component } from './comp3/comp3.component';
 import { Comp4Component } from './comp4/comp4.component';
 import { Comp5Component } from './comp5/comp5.component';
 import { Comp6Component } from './comp6/comp6.component';
+import { USDcurrencyPipe } from './usdcurrency.pipe';
+import { LoginComponent } from './Routing/login/login.component';
+import { AboutUsComponent } from './Routing/about-us/about-us.component';
+import { ContactUsComponent } from './Routing/contact-us/contact-us.component';
+import { HomeComponent } from './Routing/home/home.component';
+import { NewUserComponent } from './Routing/new-user/new-user.component';
+import { NotfoundComponent } from './Routing/notfound/notfound.component';
+import { ForgotpasswordComponent } from './Routing/forgotpassword/forgotpassword.component';
+import { ProductsComponent } from './Routing/products/products.component';
+import { LaptopComponent } from './Routing/products/laptop/laptop.component';
+import { TvComponent } from './Routing/products/tv/tv.component';
+import { TabletComponent } from './Routing/products/tablet/tablet.component';
+import { WashingMachineComponent } from './Routing/products/washing-machine/washing-machine.component';
+
 
 
 
@@ -84,6 +98,20 @@ import { Comp6Component } from './comp6/comp6.component';
     Comp4Component,
     Comp5Component,
     Comp6Component,
+    USDcurrencyPipe,
+    LoginComponent,
+    AboutUsComponent,
+    ContactUsComponent,
+    HomeComponent,
+    NewUserComponent,
+    NotfoundComponent,
+    ForgotpasswordComponent,
+    ProductsComponent,
+    LaptopComponent,
+    TvComponent,
+    TabletComponent,
+    WashingMachineComponent,
+   
    
    
   ],
