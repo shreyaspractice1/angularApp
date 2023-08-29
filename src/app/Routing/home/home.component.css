@@ -7,11 +7,12 @@
     color: cornsilk;
 }
 .foot {
+    bottom: 0px;
     margin-left: -1.1%;
-    margin-top: 28%;
 }
 .copyright {
     background-color: black;
     width: 101.15%;
     text-align: right;
+    margin-top: 28%;
 }

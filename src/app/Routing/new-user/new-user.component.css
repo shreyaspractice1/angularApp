@@ -1,10 +1,12 @@
 .newuser-container{
     margin-top: 2%;
+    margin-left: 15%;
     border: 1px solid lightgray;
     border-radius: 8%;
     padding: 5%;
-    background-image: url('https://img.freepik.com/free-photo/top-view-monochrome-paper_23-2149062051.jpg?size=626&ext=jpg&ga=GA1.2.1671042060.1690264230&semt=ais');
-}
+    width: 900px;
+    background-color: lightgrey;
+   }
 header {
     background-color: #333;
     color: white;
@@ -13,7 +15,7 @@ header {
 }
 
 .sign {
-    margin-left: 47%;
+    margin-left: 40%;
     font-size: large;
 }
 label {

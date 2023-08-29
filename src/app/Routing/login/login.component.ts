@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -6,16 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
+  constructor(private _route: Router) { }
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
   }
  username: string = '';
   password: string = '';
 
-  login() {
-    // Here you would typically implement authentication logic.
-    // For this example, let's just log the user's input.
-    console.log('Username:', this.username);
-    console.log('Password:', this.password);
+  login(email, pass) {
+    console.log(email.value, pass.value);
+    this._route.navigate(['home']);
   }
+  
+ 
 }

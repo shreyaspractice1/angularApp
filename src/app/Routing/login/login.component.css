@@ -4,17 +4,20 @@ header {
     text-align: center;
     padding: 10px;
 }
-.login-container {
-    margin-top: 1%;
+.container {
+    margin-top: 2%;
     border: 1px solid lightgray;
-    border-radius: 8%;
-    padding: 3%;
-    /* background-color: bisque; */
-    width: 800px;
-    margin-left: 20%;
+    border-radius: 5%;
+    width: 600px;
+    /* margin-left: 28%; */
+    font-size: large;
+    font-weight: 600;
+    background-color: lightgrey;
 }
-/* form {border: 3px solid #f1f1f1; border-radius: 10%;} */
-
+.cu {
+  text-align: center;
+  margin-top: 5%;
+}
 input[type=text], input[type=password] {
   width: 100%;
   padding: 12px 20px;
@@ -45,12 +48,10 @@ button:hover {
   border-radius: 10%;
 }
 .submit {
-    width: auto;
+  width: 200px;
   padding: 10px 18px;
-  background-color: green;
-  margin-right: 3%;
-  margin-left: 40%;
-  border-radius: 10%;
+  margin-left: 15%;
+  border-radius: 5%;
 }
 
 .imgcontainer {

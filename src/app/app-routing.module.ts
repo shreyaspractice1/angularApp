@@ -12,6 +12,10 @@ import { TvComponent } from './Routing/products/tv/tv.component';
 import { TabletComponent } from './Routing/products/tablet/tablet.component';
 import { WashingMachineComponent } from './Routing/products/washing-machine/washing-machine.component';
 import { ProductsComponent } from './Routing/products/products.component';
+import { PostComponent } from './Routing/post/post.component';
+import { PostdetailsComponent } from './Routing/postdetails/postdetails.component';
+import { UserComponent } from './Routing/user/user.component';
+import { UserdetailsComponent } from './Routing/userdetails/userdetails.component';
 
 
 const routes: Routes = [
@@ -30,9 +34,14 @@ const routes: Routes = [
     { path: 'tv', component: TvComponent},
     {path: 'tablet', component: TabletComponent},
     {path: 'washingmachine', component: WashingMachineComponent},
-    
+
   ] },
-  {path: '**', component: NotfoundComponent}
+  {path: 'post', component: PostComponent},
+  {path: 'postdetails/:id', component: PostdetailsComponent},
+  {path: 'user', component: UserComponent},
+  {path: 'userdetails/:id', component: UserdetailsComponent},
+  {path: 'userdetails', component: UserdetailsComponent},
+  {path: '**', component: NotfoundComponent},
 ];
 
 @NgModule({
